@@ -1,0 +1,11 @@
+server:
+  port: 3001
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:3001/eureka/  #ע�����ĵ�ַ
+spring:
+  application:
+    name: demo-eureka

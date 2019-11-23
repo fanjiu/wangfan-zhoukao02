@@ -1,0 +1,20 @@
+server:
+  port: 3003
+spring:
+  application:
+    name: demo-zull
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:3001/eureka/  #注册中心地址
+#配置zuul网关
+zuul:
+  routes:
+    demo-mony: /dm/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

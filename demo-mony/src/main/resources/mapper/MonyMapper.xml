@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhoukao.demomony.mapper.MonyMapper">
+
+    <insert id="insert">
+        insert into mony set
+        che=#{mony.che},
+        erd=#{mony.erd},
+        huib=#{mony.huib},
+        birth=now(),
+        huier=#{mony.huier},
+        `name`=#{mony.name},
+        zhus=#{mony.zhus}
+    </insert>
+    <update id="update">
+        update mony set
+        che=#{mony.che},
+        erd=#{mony.erd},
+        huib=#{mony.huib},
+        birth=now(),
+        huier=#{mony.huier},
+        `name`=#{mony.name},
+        zhus=#{mony.zhus},
+        id=#{mony.id}
+    </update>
+</mapper>

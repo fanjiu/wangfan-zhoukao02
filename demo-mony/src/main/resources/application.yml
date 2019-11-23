@@ -1,0 +1,25 @@
+server:
+  port: 3005
+spring:
+  application:
+    name: demo-mony
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: mysql
+    show-sql: true
+  jackson:
+    date-format: yyyy-MM-dd
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:3001/eureka/  #ע�����ĵ�ַ
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
